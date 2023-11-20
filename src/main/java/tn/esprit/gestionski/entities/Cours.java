@@ -1,5 +1,6 @@
 package tn.esprit.gestionski.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -28,7 +29,7 @@ public class Cours implements Serializable {
 
     private Float prix;
     private int creneau;
-
+    @JsonIgnore
     @OneToMany(mappedBy = "cours") //mapped by cause cardilaite inferrieur
     private List<Inscription> inscriptionList;
 

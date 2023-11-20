@@ -1,6 +1,7 @@
 package tn.esprit.gestionski.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -25,7 +26,7 @@ public class Piste implements Serializable {
 
     private Long logeur;
     private Long pente;
-
+    @JsonIgnore
     @ManyToMany(mappedBy = "listPiste") //fi fils tet7at wken ma9lsh fi ennoce 7ot winn t7b
     private List<Skieur> skieurList;
 }

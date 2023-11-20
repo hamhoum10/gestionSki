@@ -1,5 +1,6 @@
 package tn.esprit.gestionski.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -26,11 +27,11 @@ public class Skieur implements Serializable {
     private Date dateNaissance;
 
     private String ville;
-
+@JsonIgnore
     @ManyToMany
     private List<Piste> listPiste;
 
-    @OneToMany(mappedBy = "skieur")
+    @OneToMany(mappedBy = "skieur",cascade = CascadeType.ALL)
     private List<Inscription> inscriptions;
 
     @OneToOne

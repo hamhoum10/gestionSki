@@ -1,5 +1,6 @@
 package tn.esprit.gestionski.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,7 +24,7 @@ public class Moniteur  implements Serializable {
 
     @Temporal(TemporalType.DATE)
     private Date dateRecu;
-
+    @JsonIgnore
     @OneToMany
     private List<Cours> coursList;
 }

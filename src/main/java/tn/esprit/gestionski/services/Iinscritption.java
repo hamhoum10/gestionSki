@@ -10,4 +10,5 @@ public interface Iinscritption {
     public List<Inscription> findAllInscription();
     public Inscription findByIdInscription(long id);
     public void deleteInscription(long id);
-}
+    public Inscription addInscriptionToSkieur(Inscription inscription,long numskieur);
+    public Inscription addInscriptionToCour(Inscription inscription,long numcour);}
