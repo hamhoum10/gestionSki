@@ -54,4 +54,5 @@ public class SkieurController {
     @GetMapping("getbyType/{type}")
     public List<Skieur> getSkieurByType(@PathVariable TypeAbonnement type){
     return SkieurServiceImp.retiveskieurByTypeAbonnement(type);}
+
 }

@@ -7,10 +7,13 @@ import tn.esprit.gestionski.entities.Abonnement;
 import tn.esprit.gestionski.entities.Skieur;
 import tn.esprit.gestionski.entities.TypeAbonnement;
 
+import java.util.Date;
 import java.util.List;
 
-public interface SkieurRepository extends JpaRepository<Skieur,Long> {
-    List<Skieur> findByAbonnement_TypeAbon(TypeAbonnement typeAbonnement);
+public interface AbonementRepository extends JpaRepository<Abonnement,Long> {
+    //22  24 25 to do
+
     @Query("select a from Abonnement a where a.typeAbon =: type order by a.dateDebut")
     List<Abonnement> getSubscriptionByType(@Param("type") TypeAbonnement type);
+    List<Abonnement>findAbonnementByDateDebutBetween(Date begin,Date dend);
 }
