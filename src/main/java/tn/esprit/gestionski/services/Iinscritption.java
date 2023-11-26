@@ -11,4 +11,9 @@ public interface Iinscritption {
     public Inscription findByIdInscription(long id);
     public void deleteInscription(long id);
     public Inscription addInscriptionToSkieur(Inscription inscription,long numskieur);
-    public Inscription addInscriptionToCour(Inscription inscription,long numcour);}
+    public Inscription addInscriptionToCour(Inscription inscription,long numcour);
+    public Inscription addRegistrationAndAssignToSkierAndCourse(Inscription inscription, Long numSkieur, Long numCours)
+
+
+}
+

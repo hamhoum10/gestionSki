@@ -17,7 +17,10 @@ import java.util.List;
 @RestController
 public class AbonementController {
     private AbonementServiceImp abonementServiceImp;
-
+@GetMapping("getmonth")
+void showMonthlyRecurringRevenue(){
+    abonementServiceImp.showMonthlyRecurringRevenue();
+}
 
     @GetMapping("getbyTypeandordred/{typeAbonnement}")
     public List<Abonnement> getandordred(@PathVariable TypeAbonnement typeAbonnement){

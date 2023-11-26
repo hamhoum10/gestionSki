@@ -11,4 +11,6 @@ public interface IAbonement {
 
     List<Abonnement> getSubscriptionByType( TypeAbonnement typeAbonnement);
     List<Abonnement>findAbonnementByDateDebutBetween(Date begin, Date dend);
+    void showMonthlyRecurringRevenue();
+
 }

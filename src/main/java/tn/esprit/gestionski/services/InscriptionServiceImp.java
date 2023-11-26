@@ -58,4 +58,9 @@ public class InscriptionServiceImp implements Iinscritption{
         return InscriptionRepository.save(inscription);
     }
 
+    @Override
+    public Inscription addRegistrationAndAssignToSkierAndCourse(Inscription inscription, Long numSkieur, Long numCours) {
+        return null;
+    }
+
 }
